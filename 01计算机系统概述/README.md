@@ -81,7 +81,7 @@ flowchart LR
   A[中断的分类]
   B[内中断（也称为异常、例外）]
   C[外中断（也称中断）]
-  D[陷进、陷入(trap)]
+  D[陷进/陷入(trap)]
   E[故障(fault)]
   F[终止(abort)]
   G[时钟中断]
