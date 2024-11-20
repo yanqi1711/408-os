@@ -14,10 +14,10 @@ flowchart LR
 ```mermaid
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
-  A: 概念
-  B: 负责管理类协调硬件、软件等计算机资源的工作
-  C: 为上层用户、应用程序提供简单易用服务
-  D: 是一种系统软件
+  A[概念]
+  B[负责管理类协调硬件、软件等计算机资源的工作]
+  C[为上层用户、应用程序提供简单易用服务]
+  D[是一种系统软件]
   A --> B
   A --> C
   A --> D
