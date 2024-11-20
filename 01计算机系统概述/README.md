@@ -2,7 +2,6 @@
 
 ## 操作系统定义
 ```mermaid
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
     markdown["`This **is** _Markdown_`"]
     newLines["`Line1
@@ -12,7 +11,6 @@ flowchart LR
 ```
 
 ```mermaid
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
   A[概念]
   B[负责管理类协调硬件、软件等计算机资源的工作]
