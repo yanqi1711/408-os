@@ -78,7 +78,7 @@ stateDiagram-v2
 ### 中断和异常
 内中断当前指令引起, 外中断与当前指令无关
 ```mermaid
-graph TD
+graph
   A: 中断的分类
   B: 内中断（也称为异常、例外）
   C: 外中断（也称中断）
