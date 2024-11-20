@@ -3,15 +3,6 @@
 ## 操作系统定义
 ```mermaid
 flowchart LR
-    markdown["`This **is** _Markdown_`"]
-    newLines["`Line1
-    Line 2
-    Line 3`"]
-    markdown --> newLines
-```
-
-```mermaid
-flowchart LR
   A[概念]
   B[负责管理类协调硬件、软件等计算机资源的工作]
   C[为上层用户、应用程序提供简单易用服务]
@@ -86,16 +77,15 @@ flowchart LR
 ### 中断和异常
 内中断当前指令引起, 外中断与当前指令无关
 ```mermaid
-%%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
-  A: 中断的分类
-  B: 内中断（也称为异常、例外）
-  C: 外中断（也称中断）
-  D: 陷进、陷入(trap)
-  E: 故障(fault)
-  F: 终止(abort)
-  G: 时钟中断
-  H: IO中断
+  A[中断的分类]
+  B[内中断（也称为异常、例外）]
+  C[外中断（也称中断）]
+  D[陷进、陷入(trap)]
+  E[故障(fault)]
+  F[终止(abort)]
+  G[时钟中断]
+  H[IO中断]
   A-->B
   A-->C
   B-->D
