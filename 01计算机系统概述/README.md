@@ -1,16 +1,26 @@
 # 概述
 
 ## 操作系统定义
+```mermaid
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+flowchart LR
+    markdown["`This **is** _Markdown_`"]
+    newLines["`Line1
+    Line 2
+    Line 3`"]
+    markdown --> newLines
+```
 
 ```mermaid
-flowchart LR;
-  A: 概念;
-  B: 负责管理类协调硬件、软件等计算机资源的工作;
-  C: 为上层用户、应用程序提供简单易用服务;
-  D: 是一种系统软件;
-  A --> B;
-  A --> C;
-  A --> D;
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+flowchart LR
+  A: 概念
+  B: 负责管理类协调硬件、软件等计算机资源的工作
+  C: 为上层用户、应用程序提供简单易用服务
+  D: 是一种系统软件
+  A --> B
+  A --> C
+  A --> D
 ```
 
 ## 操作系统的功能和目标
@@ -78,22 +88,23 @@ flowchart LR;
 ### 中断和异常
 内中断当前指令引起, 外中断与当前指令无关
 ```mermaid
-flowchart LR;
-  A: 中断的分类;
-  B: 内中断（也称为异常、例外）;
-  C: 外中断（也称中断）;
-  D: 陷进、陷入(trap);
-  E: 故障(fault);
-  F: 终止(abort);
-  G: 时钟中断;
-  H: IO中断;
-  A-->B;
-  A-->C;
-  B-->D;
-  B-->E;
-  B-->F;
-  C-->G;
-  C-->H;
+%%{init: {"flowchart": {"htmlLabels": false}} }%%
+flowchart LR
+  A: 中断的分类
+  B: 内中断（也称为异常、例外）
+  C: 外中断（也称中断）
+  D: 陷进、陷入(trap)
+  E: 故障(fault)
+  F: 终止(abort)
+  G: 时钟中断
+  H: IO中断
+  A-->B
+  A-->C
+  B-->D
+  B-->E
+  B-->F
+  C-->G
+  C-->H
 ```
 陷入: 由指令引发, 比如程序想要调用操作系统内核的服务（陷入指令本身是非特权指令）
 故障: 由错误条件引起, 可能被内核程序修复, 让他继续执行, 如缺页故障
