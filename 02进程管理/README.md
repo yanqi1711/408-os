@@ -77,7 +77,7 @@ flowchart LR
 
 创建
 ```mermaid
-flowchat LR
+flowchart LR
   A[创建原语]
   X[申请空白PCB]
   B[为新进程分配所需资源]
