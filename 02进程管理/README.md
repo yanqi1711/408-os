@@ -61,7 +61,7 @@ flowchart LR
 进程PCB中会有一个`变量state`来表示进程当前状态
 
 进程的转换:
-<img src="./img/进程三种状态的转换.png" max-width="80%"/>
+<p align="center"><img src="./img/进程三种状态的转换.png" style="width:70%!important"></p>
 
 进程的组织（大多是链式的）:
 - 链接方式
@@ -280,7 +280,7 @@ TCB（线程控制块）大概有如下信息：
   - 优先级（线程调度、资源分配的参考）
 线程的组织就是使各种TCB根据不同系统来分门别类的组织起来
 线程的控制就是各种状态之间的转换
-<img src="./img/线程的状态与转换.png" max-width="80%"/>
+<p align="center"><img src="./img/线程的状态与转换.png" style="width:70%!important"></p>
 
 **⚠️一些概念和错题知识点整理**<br>
 - `创建`进程实质上是`创建进程映像中的PCB`；`撤销`进程实质上是`撤销进程的PCB`
@@ -299,13 +299,13 @@ TCB（线程控制块）大概有如下信息：
 ### 调度的概念
 按照某种算法选择一个进程将处理机分配给他<br>
 三层调度：作业调度、内存调度、进程调度<br>
-<img src="./img/三层调度的对比.png" max-width="80%"/>
+<p align="center"><img src="./img/三层调度的对比.png" style="width:70%!important"></p>
 
 补充知识：挂起状态<br>
-<img src="./img/七状态模型.png" max-width="80%"/>
+<p align="center"><img src="./img/七状态模型.png" style="width:70%!important"></p>
 
 ### 调度的目标（调度算法的评价指标）
-<img src="./img/评价指标.png" max-width="80%"/>
+<p align="center"><img src="./img/评价指标.png" style="width:70%!important"></p>
 <br>
 `系统吞吐量`=总共完成了多少道作业/总共花了多少时间<br>
 `响应时间`=从用户提交请求到首次产生响应所用的时间
@@ -362,13 +362,17 @@ TCB（线程控制块）大概有如下信息：
 
 ### 调度算法
 先来先服务（FCFS）
-<img src="./img/FCFS.png" max-width="80%"/>
+<p align="center"><img src="./img/FCFS.png" style="width:70%!important"></p>
 短作业优先（SJF）
-<img src="./img/SJF.png" max-width="80%"/>
-最短剩余时间优先（SRTN）
-<img src="./img/SRTN.png" max-width="80%"/>
+<p align="center"><img src="./img/SJF.png" style="width:70%!important"></p>
+最短剩余时间优先（SRTN） <del><em>即抢占式短作业优先</em></del>
+<p align="center"><img src="./img/SRTN.png" style="width:70%!important"></p>
 高响应比优先（HRRN）<br>
 响应比: (等待时间+要求服务时间)/要求服务时间<br>
-<img src="./img/HRRN.png" max-width="80%"/>
+<p align="center"><img src="./img/HRRN.png" style="width:70%!important"></p>
 三种算法对比：<br>
-<img src="./img/三种公平调度算法.png" max-width="80%"/>
+<p align="center"><img src="./img/三种公平调度算法.png" style="width:70%!important"></p>
+时间片轮转（RR）
+<p align="center"><img src="./img/RR.png" style="width:70%!important"></p>
+优先级调度
+多级反馈队列调度

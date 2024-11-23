@@ -139,10 +139,10 @@ flowchart LR
 ```
 
 新增分层、模块化、外核操作系统结构：
-<img src="./img/操作系统体系结构.png" style="max-width=80%">
+<p align="center"><img src="./img/操作系统体系结构.png" style="width:70%!important"></p>
 
 ## 操作系统的引导
-<img src="./img/操作系统开机过程.png" style="max-width=80%">
+<p align="center"><img src="./img/操作系统开机过程.png" style="width:70%!important"></p>
 1️⃣ CPU从一个特定主存地址开始，取指令，执行ROM（BIOS）中的引导程序（先进行硬件自检，再开机）<br>
 2️⃣ 将磁盘的`主引导记录`（MBR）读入内存，执行磁盘引导程序，扫描分区表<br>
 3️⃣ 从活动分区（又称主分区，即安装了操作系统的分区一般的C:）读入分区引导记录（PBR），执行其中的程序<br>
@@ -150,4 +150,4 @@ flowchart LR
 
 ## 虚拟机
 使用虚拟化技术，将一台物理机器虑拟化为多台虚拟机器(Virtual Machine)，每个虚拟机器都可以独立运行一个操作系统
-<img src="./img/两类虚拟机管理程序对比.png" style="max-width=80%">
+<p align="center"><img src="./img/两类虚拟机管理程序对比.png" style="max-width=70%"></p>
