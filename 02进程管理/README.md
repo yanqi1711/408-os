@@ -370,9 +370,17 @@ TCB（线程控制块）大概有如下信息：
 高响应比优先（HRRN）<br>
 响应比: (等待时间+要求服务时间)/要求服务时间<br>
 <p align="center"><img src="./img/HRRN.png" style="width:70%!important"></p>
-三种算法对比：<br>
+适用于早期批处理系统的三种算法对比：<br>
 <p align="center"><img src="./img/三种公平调度算法.png" style="width:70%!important"></p>
 时间片轮转（RR）
 <p align="center"><img src="./img/RR.png" style="width:70%!important"></p>
-优先级调度
+优先级调度（非抢占式）
+<p align="center"><img src="./img/非抢占式优先级调度.png" style="width:70%!important"></p>
+优先级调度（抢占式）
+<p align="center"><img src="./img/抢占式优先级调度.png" style="width:70%!important"></p>
 多级反馈队列调度
+<p align="center"><img src="./img/多级反馈队列调度算法.png" style="width:70%!important"></p>
+交互式操作系统的三种算法对比：
+<p align="center"><img src="./img/交互式系统三种调度算法.png" style="width:70%!important"></p>
+多级队列调度算法，简单的例子：
+<p align="center"><img src="./img/多级队列调度.png" style="width:70%!important"></p>
