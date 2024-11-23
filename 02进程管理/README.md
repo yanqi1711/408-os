@@ -456,5 +456,30 @@ critical section;
 flag[1] = 0;
 remainder section;
 ```
-
+总结：
 <p align="center"><img src="./img/进程互斥软件实现.png" style="width:70%!important"></p>
+
+### 进程互斥的硬件实现方法
+中断屏蔽、TSL指令、Swap指令/XCHG指令
+<p align="center"><img src="./img/进程互斥的硬件实现.png" style="width:70%!important"></p>
+
+### 互斥锁
+```C
+acquire() {
+  while(!available);
+  available = false;
+}
+release() {
+  available = true;
+}
+```
+acquire或release执行必须是`原子操作`，因此采用`硬件机制实现`<br>
+需要连续循环等的互斥锁都称为`自旋锁`（spin lock），如TSL指令、swap指令、单标志法<br>
+
+特性：
+- 需`忙等`，进程时间片用完才下处理机，违反“让权等待”
+- 优点：等待期间不用切换进程上下文，多处理器系统中，若上锁的时间短，则等待代价很低
+- `常用于多处理器系统`，一个核忙等，其他核照常工作，并快速释放临界区
+- 不太适用于单处理机系统，忙等的过程中不可能解锁
+
+### 信号量机制
