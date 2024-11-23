@@ -384,3 +384,77 @@ TCB（线程控制块）大概有如下信息：
 <p align="center"><img src="./img/交互式系统三种调度算法.png" style="width:70%!important"></p>
 多级队列调度算法，简单的例子：
 <p align="center"><img src="./img/多级队列调度.png" style="width:70%!important"></p>
+
+**⚠️一些概念和错题知识点整理**<br>
+- `UNIX`是一个强大的多用户、多任务操作系统、支持多种处理器架构，按照操作系统分类，属于`分时`操作系统
+- `中断向量`本身是用于`存放中断服务例行程序的入口地址`
+
+---
+
+## 同步与互斥
+### 同步与互斥的基本概念
+为什么要引入同步互斥？<br>
+因为并发进程是异步的，为了协调进程之间的相互制约关系，所以引入同步互斥<br>
+同步：进程间协调工作，保证进程按预定的顺序执行<br>
+互斥：进程间互斥访问共享资源，保证同一时刻只有一个进程访问共享资源<br>
+
+四个部分：
+- 进入区：检查是否可进入临界区，若可进入，需要`上锁`
+- 临界区：访问临界资源的那段代码
+- 退出区：负责`解锁`
+- 剩余区：其余代码部分
+
+需要遵循的原则：
+- 空闲让进：临界区空闲时，应允许一个进程访问
+- 忙则等待：临界区正在被访问时，其他试图访问的进程需要等待
+- 有限等待：要在有限时间内进入临界区，保证不会饥饿
+- 让权等待：进入不了临界区的进程，要释放处理机，防止忙等
+
+### 进程互斥的软件实现方法
+单标志法（使用turn表示允许进入临界区的进程号）
+```c
+int turn = 0;
+
+// P0进程
+while (turn != 0);
+critical section;
+turn = 1;
+remainder section;
+
+// P1进程
+while (turn != 1);
+critical section;
+turn = 0;
+remainder section;
+```
+
+双标志先检查法
+<p align="center"><img src="./img/双标志先检查法.png" style="width:70%!important"></p>
+
+双标志后检查法
+<p align="center"><img src="./img/双标志后检查法.png" style="width:70%!important"></p>
+
+Peterson算法<br>
+主动争取；主动谦让；检查对方是否也想使用，且最后一次是不是自己谦让的
+```c
+int flag[2] = {0, 0};
+int turn = 0;
+
+// P0进程
+flag[0] = 1;
+turn = 1;
+while (flag[1] == 1 && turn == 1);
+critical section;
+flag[0] = 0;
+remainder section;
+
+// P1进程
+flag[1] = 1;
+turn = 0;
+while (flag[0] == 1 && turn == 0);
+critical section;
+flag[1] = 0;
+remainder section;
+```
+
+<p align="center"><img src="./img/进程互斥软件实现.png" style="width:70%!important"></p>
