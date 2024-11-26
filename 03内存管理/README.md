@@ -50,6 +50,7 @@ void main() {
 - 两种分区方式：
   - 分区大小相等
   - 分区大小不等
+
 操作系统需建立一个`分区说明表`来表示各个分区的分配情况
 <p align="center"><img src="./img/分区说明表.png" style="width:70%!important"></p>
 
@@ -62,6 +63,7 @@ void main() {
   - 回收区之前有相邻的空闲分区
   - 回收区前、后有相邻的空闲分区
   - 回收区前、后没有相邻的空闲分区
+
 操作系统使用空闲分区表或空闲分区链来管理空闲分区
 <p align="center"><img src="./img/空闲分区表.png" style="width:70%!important"></p>
 
