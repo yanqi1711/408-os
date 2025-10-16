@@ -78,7 +78,7 @@ FAT：一个磁盘仅有一张FAT，开机时，将FAT读入内存，并常驻�
 空闲链表法：
 - 空闲盘块链：以盘块为单位组成一条空闲链
 - 空闲盘区链：以盘区为单位组成一条空闲链
-<p align="center"><img src="./img/空闲链块法.png" style="width:70%!important"></p>
+<p align="center"><img src="./img/空闲盘块链.png" style="width:70%!important"></p>
 <p align="center"><img src="./img/空闲盘区链.png" style="width:70%!important"></p>
 
 位示图法：每个二进制位对应一个盘块，可以用0表示空闲，1表示占用
