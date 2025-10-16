@@ -29,6 +29,7 @@
 
 ### 进程的内存映像
 <p align="center"><img src="./img/进程的内存映像.png" style="width:70%!important"></p>
+
 ```c
 #define X 1024//宏定义常量是立即数，编译时直接替换
 const int b = 2;//常变量 放在只读代码/数据段
